@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+	<!-- Config for production server -->
+	<production>
+		<application>
+			<name>MyApp</name>
+			<desc>MyApp.com</desc>
+		</application>
+		<site>
+			<hostname>www.myapp.com</hostname>
+			<url>http://www.myapp.com</url>
+			<baseurl>/</baseurl>
+			<title>MyApp</title>
+			<description>myapp is just an bootstraping example from ajaxray</description>
+			<keywords>zend, ajaxray, bootstrapping, multiple host</keywords>
+		</site>
+		<database>
+			<adapter>PDO_MYSQL</adapter>
+			<params>
+				<host>localhost</host>
+				<username>myapp-production</username>
+				<password>myapp-production-pw</password>
+				<dbname>myapp</dbname>
+			</params>
+		</database>
+		<session>
+			<name>MyAppMainSite</name>
+			<use_only_cookies>on</use_only_cookies>
+			<remember_me_seconds>86400</remember_me_seconds>
+		</session>
+		<path>
+			<languages>/myapp/languages</languages>
+			<languagesxml>/myapp/configs/languages.xml</languagesxml>
+			<regionsxml>/myapp/configs/regions.xml</regionsxml>
+		</path>
+		<environment>
+			<default_timezone>Europe/Helsinki</default_timezone>
+			<display_errors>0</display_errors>
+			<debug>0</debug>
+			<compress_output>1</compress_output>
+			<log_queries>0</log_queries>
+		</environment>
+		<admintools>
+			<webmaster>
+				<name>MyApp Webmaster</name>
+				<email>webmaster@myapp.com</email>
+			</webmaster>
+		</admintools>
+	</production>
+	
+	<!-- Config for staging servers -->
+	<staging extends="production">
+		<site>
+			<hostname>staging.dev.myapp.com</hostname>
+			<url>http://staging.dev.myapp.com</url>
+			<title>MyApp Staging</title>
+		</site>
+		<database>
+			<params>
+				<username>myapp-admin</username>
+				<password>stg-pw</password>
+				<dbname>myapp-db</dbname>
+			</params>
+		</database>
+		<session>
+			<name>MyappMainSiteStaging</name>
+			<remember_me_seconds>864000</remember_me_seconds>
+		</session>
+		<environment>
+			<display_errors>0</display_errors>
+			<debug>1</debug>
+			<compress_output>0</compress_output>
+			<log_queries>0</log_queries>
+			
+		</environment>
+	</staging>
+
+	<!-- Config for development servers -->
+	<development extends="production">
+		<site>
+			<hostname>dev.zuova.com</hostname>
+			<url>http://dev.zuova.com</url>
+			<title>Zuova - D</title>
+			<baseurl>/</baseurl>
+			<captchaurl>http://dev.zuova.com/tmp/</captchaurl>
+			<realpath>c:/www/applications/zend/Zuova</realpath>
+		</site>
+		<database>
+			<params>
+				<host>govsip.com</host>
+				<username>root</username>
+				<password>JPSzqFeNT</password>
+				<dbname>zuova</dbname>
+			</params>
+		</database>
+		<session>
+			<name>ZuovaDev</name>
+			<remember_me_seconds>864000</remember_me_seconds>
+		</session>
+		<environment>
+			<default_timezone>EST</default_timezone>
+			<debug>1</debug>
+			<compress_output>0</compress_output>
+			<log_queries>1</log_queries>
+			<display_errors>1</display_errors>
+		</environment>
+	</development>
+</configdata>

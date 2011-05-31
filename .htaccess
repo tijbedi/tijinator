@@ -1,0 +1,7 @@
+AuthName "Password Protect Directory"
+AuthType Basic
+AuthUserFile /home/kbedi/.htpasswd
+<Limit GET POST PUT>
+Require valid-user
+</Limit>
+

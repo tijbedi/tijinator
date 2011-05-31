@@ -1,0 +1,25 @@
+<?php 
+/**
+ * Login Form View	
+ * @author Kshitij Bedi
+ * @copyright Zuova.com
+ * @version 1.0
+ * @package Views
+ */
+?>
+<script language="javascript">
+$("#loginForm").ajaxForm({"beforeSubmit":showRequest,"success":showResponse,"clearForm":false})
+</script>
+<div class="home-page-head" style="height: 50px;">
+	<?php echo $this->translate("Login here");?>
+	<div id="post_message_result" class="clear warning" style="display: none;"></div>
+</div>
+<?php echo $this->form?>
+
+<div class="clear">&nbsp;</div>
+
+<div class="home-page-subtitle">
+	<a href="#" id="changedMind" class="home-page-subtitle">
+		Changed your mind? change your selection
+	</a>
+</div>

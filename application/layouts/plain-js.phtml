@@ -1,0 +1,8 @@
+<?php echo $this->jQuery(); ?>
+
+<?php echo $this->headScript()->appendFile('/jquery/jquery.json-1.3.min.js')
+							  ->appendFile('/jquery/jquery.form.js')
+							  ->appendFile('/application.js');?>         
+	  
+	
+<?php echo $this->layout()->content; ?>

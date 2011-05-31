@@ -1,0 +1,67 @@
+8
+
+dir
+1
+file:///opt/local/svn/zuova/trunk/Zuova/forms
+file:///opt/local/svn
+
+
+
+2011-02-07T23:58:30.359924Z
+1
+gmcquillan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a1399942-64f4-41b4-8973-574b2e8a4210
+
+SignupForm.php
+file
+
+
+
+
+2011-02-08T14:46:03.000000Z
+6f86206f57da79d0b7358285c0479a93
+2011-02-07T23:58:30.359924Z
+1
+gmcquillan
+
+Decorator
+dir
+
+LoginForm.php
+file
+
+
+
+
+2011-02-08T14:46:03.000000Z
+de667a816b0b23451f53396b6506d02b
+2011-02-07T23:58:30.359924Z
+1
+gmcquillan
+
+JQueryForm.php
+file
+
+
+
+
+2011-02-08T14:46:03.000000Z
+59f3a3aaa3e09636fa6859a52949f3a7
+2011-02-07T23:58:30.359924Z
+1
+gmcquillan
+

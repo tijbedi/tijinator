@@ -1,0 +1,11 @@
+<?php
+/**
+* @author Kshitij Bedi
+* @copyright Zuova.com
+* @version 1.0
+* @package views
+*/
+?>
+<h2>Create Your Zuova Account</h2>
+<?php echo $this->userForm;?>
+<p class="warning">Your password will be emailed to you once you register.</p>

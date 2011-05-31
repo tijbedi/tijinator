@@ -1,0 +1,52 @@
+8
+
+dir
+1
+file:///opt/local/svn/zuova/trunk/Zuova/views/scripts/user
+file:///opt/local/svn
+
+
+
+2011-02-07T23:58:30.359924Z
+1
+gmcquillan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a1399942-64f4-41b4-8973-574b2e8a4210
+
+signup.phtml
+file
+
+
+
+
+2011-02-08T14:46:04.000000Z
+5a22835c6d553e125021f86af9a03df7
+2011-02-07T23:58:30.359924Z
+1
+gmcquillan
+
+login.phtml
+file
+
+
+
+
+2011-02-08T14:46:04.000000Z
+c7cf77d6df19306b583d74e3e843c70f
+2011-02-07T23:58:30.359924Z
+1
+gmcquillan
+

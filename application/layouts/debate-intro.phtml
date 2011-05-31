@@ -1,0 +1,66 @@
+<?php
+/**
+* @author Kshitij Bedi
+* @copyright Zuova.com
+* @version 1.0
+* @package Layouts
+*/
+?>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <?php echo $this->headTitle("Zuova.com") ?>    
+    <?php echo $this->jQuery(); ?>
+    
+    <?php echo $this->headScript()->appendFile('/jquery/jquery-ui.min.js')
+    							  ->appendFile('http://code.jquery.com/jquery-1.4.2.min.js')
+    							  ->appendFile('/jquery/jquery.form.js')
+    							  ->appendFile('/application.js');?>         
+	<?php echo $this->headLink()->appendStylesheet('/application.css')
+    							->appendStylesheet('/jquery/jquery-ui.css')  
+    							->appendStylesheet('/jquery/smoothness/jquery-ui-1.7.2.custom.css');?>    
+</head>
+
+<body marginwidth=0 marginheight=0 style="margin: 1px;">
+
+	<table height="100%" border="0" cellspacing="0" cellpadding="0" align="center" id="maintable">
+		<tr>
+			<td align="center" colspan="2" id="banner">		
+			
+				<div style="position: relative;">
+					<div style="position: absolute;width: 100%;text-align: center;top: 0px;left: 0px;">
+						<?php echo $this->debate->question ?>
+					</div>	
+				
+					<div style="position: absolute;left: 16px; top: 45px; width: 100%;text-align: left;font: normal 15px helvetica;color: #A8D63A;">
+						<div style="width: 90px;float: left;text-align: left;" id="countdown_label">T - </div>					
+						<div style="width: 140px;float: left;text-align: left;"> Responses: <label id="total_responses"><?php echo count($this->responses); ?></label></div>						
+						<div style="width: 300px;float: left;text-align: center;"><?=date("F j, Y")?></div>
+						<div style="width: 140px;float: left;text-align: right;padding-right: 20px;">For: <label id="total_for"><?php echo count($this->total_for); ?></label></div>						
+						<div style="width: 100px;float: left;">Against: <label id="total_against"><?php echo count($this->total_against); ?></label></div>
+					</div>
+				</div>
+				
+			</td>
+		</tr>
+		<tr>
+			
+		</tr>
+	    <tr>
+			<td id="content" colspan="2" valign="top" align="center">
+				<?php echo $this->layout()->content; ?>
+			</td>    
+		</tr>
+		<tr>
+			<td  colspan="2" valign="bottom" id="footer">			
+			<img src="<?php echo Zend_Controller_Front::getInstance()->getRequest()->getBaseUrl();?>/graphics/site-logo.png"/> 
+				- new day, new debate, new arguments, new resolutions, new opinions...
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

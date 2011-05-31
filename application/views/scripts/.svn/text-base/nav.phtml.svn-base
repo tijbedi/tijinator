@@ -1,0 +1,10 @@
+<?
+/**
+* @author Kshitij Bedi
+* @copyright Zuova.com
+* @version 1.0
+* @package views
+*/
+?>
+
+<?php echo $this->menu; ?>

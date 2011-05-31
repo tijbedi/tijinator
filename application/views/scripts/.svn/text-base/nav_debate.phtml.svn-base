@@ -1,0 +1,26 @@
+<?
+/**
+* @author Kshitij Bedi
+* @copyright Zuova.com
+* @version 1.0
+* @package views
+*/
+?>
+
+<script type="text/javascript"> 
+//<![CDATA[
+$(document).ready(function() {
+    $("#commentForm").ajaxForm({"beforeSubmit":showRequest,"success":showResponse,"clearForm":false})
+});
+</script>
+
+<div class="clear12"></div>
+
+<div id="postMessage" class="subhead">Post a mesasge</div>
+<div id="post_message_form">
+	<?php echo $this->form ?>
+</div>
+<div class="warning" id="post_message_result"></div>
+<div class="clear12"></div>
+<a href="/user/logout">Logout</a>
+

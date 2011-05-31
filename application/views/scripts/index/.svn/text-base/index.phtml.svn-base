@@ -1,0 +1,24 @@
+<?php
+/**
+* @author Kshitij Bedi
+* @copyright Zuova.com
+* @version 1.0
+* @package views
+*/
+?>
+<?php echo $zuova_session->decision;?>
+<div id="main_message_block" style="height: 460px;overflow: hidden;">
+	<?php foreach ($this->responses as $response):?>
+		<div class="<?php echo $this->responseType[$response->type] ?>Message">
+			<?php echo $response->message ?>
+			<div class="message_metadata">posted: <?php echo date("M d, y h:i a",strtotime($response->date_created)) ?> (User <?php echo $response->user ?>)</div>			
+		</div>
+	<?php endforeach;?>
+</div>
+
+<input type="hidden" value="<?php echo $this->responses[0]->id?>" id="last_message" />
+
+<script language="javascript">
+	var x = window.setInterval("getMessages('<?php echo $this->baseUrl;?>/index/getmessages/debate/<?php echo $this->debate->id?>/last_message/' + document.getElementById('last_message').value );", 15000);
+	countdown(9215,'countdown_label');
+</script>
